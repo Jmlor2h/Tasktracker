@@ -28,7 +28,7 @@ app.use(express.urlencoded({ extended: true })); // middleware that helps recogn
 // extended:true allows it to read objects/constructors, etc.
 
 // POST METHOD
-// Post method is async so you wont have to wait on other things.
+// Post method is async so you wont have to wait on other things/function runs without interruption
 // Once you send the request (press enter to submit new task)
 // a new object named todoTask is created and the user input is imported
 // as data for "content" into the DB.
@@ -37,7 +37,7 @@ app.post('/',async (req, res) => {
   content: req.body.content // user input
   });
   try {
-  await todoTask.save(); // built in mongoose function to save to DB using await allows the data to hit client asap not having to wait on the db to save it first.
+  await todoTask.save(); // built in mongoose function to save to DB using await makes this asynchronous.
   res.redirect("/");
   } catch (err) {
   res.redirect("/");
