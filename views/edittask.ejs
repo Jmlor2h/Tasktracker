@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+<title>Todo App</title>
+<link rel="stylesheet" href="/static/styles/app.css" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Candal|Chewy&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+<body>
+<div class="todo-container">
+<h2>To-Do List</h2>
+<div class="todo">
+<form action="" method="POST" class="todo-header">
+<input type="text" name="content">
+<button type="submit"><span class="fas fa-plus"></span></button>
+</form>
+<ul class="todo-list">
+<% todoTasks.forEach(taskinfo => { %>
+<% if (taskinfo._id == idTask) { %>
+<li class="todo-list-item">
+<form action="/edit/<%= taskinfo._id %>" method="POST">
+<input type="text" value="<%= taskinfo.content %>" name="content">
+<button type="submit"><i class="fas fa-check"></i></button>
+<a href="/" class="cancel"><i class="fas fa-times"></i></a>
+</form>
+</li>
+<% } else { %>
+<li class="todo-list-item">
+<div class="todo-list-item-name"><%= taskinfo.content %></div>
+<a href="/edit/<%= taskinfo._id %>" class="edit"> <i class="fas fa-user-edit"></i>
+</a>
+<a href="/remove/<%= taskinfo._id %>" class="remove"> <i class="fas fa-trash"></i>
+</a>
+</li>
+<% } %>
+<% }) %>
+</ul>
+</div>
+</div>
+</body>

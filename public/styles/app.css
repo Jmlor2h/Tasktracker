@@ -1,49 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200;400&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
     body {
-    background: #e27442;
+    background: #493d38;
     }
 
     .todo-container {
-    color: white;
+    color: rgb(193, 181, 75);
     position: absolute;
-    top:50%;
+    top:25%;
     left: 50%;
     padding: 20px;
-    width: 600px;
+    width: 95%;
     transform: translate(-50%,-50%);
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(16, 11, 11, 0.1);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: 'Bebas Neue', sans-serif;
     }
     .todo {
-    width: 400px;
+    width: 95%;
     }
     .todo-container h2 {
     padding: 10px;
-    font-family: 'Candal', sans-serif;
     font-size: 2em;
+    letter-spacing: 4px;
     }
     .todo-header input {
-    width: 92%;
+    width: 95%;
     border: none;
     border-radius: 5px;
-    height: 20px;
-    font-family: 'Candal', sans-serif;
+    height: 30px;
     }
     .todo-header button {
-    color: white;
     border: none;
-    border-radius: 50%;
     cursor: pointer;
-    padding: 5px;
-    font-family: 'Candal', sans-serif;
-    background-color: rgb(51, 212, 100);
+    color: rgb(0, 255, 76);
+    background-color: rgba(16, 11, 11, 0.1);
+    font-size: 1rem;
     }
     .todo-container ul {
     list-style: none;
@@ -53,10 +52,11 @@
     margin-top: 10px;
     border: none;
     border-radius: 5px;
-    font-family: 'Candal', sans-serif;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(121, 121, 121, 0.3);
     display: flex;
     flex-direction: row;
+    letter-spacing: 1px;
+    width: 95%;
     }
     .todo-list-item form {
     width: 100%;
@@ -67,39 +67,34 @@
     margin-right: 20px;
     border: none;
     border-radius: 5px;
-    font-family: 'Candal', sans-serif;
+    padding: 2px;
     }
     .todo-list-item button {
-    color: white;
-    border: none;
-    border-radius: 5px;
+    color: rgb(0, 255, 76);
     cursor: pointer;
-    padding: 5px;
-    font-family: 'Candal', sans-serif;
-    background-color: rgb(51, 212, 100);
+    text-decoration: none;
+    background: transparent;
+    border: none;
     }
     .todo-list-item .cancel {
-    color: white;
+    color: rgb(253, 0, 0);
     text-decoration: none;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
     padding: 5px;
-    font-family: 'Candal', sans-serif;
-    background-color: rgb(223, 43, 43);
     margin-left: 5px;
     }
     .todo-list-item div {
     flex-grow: 2;
     }
     .todo-list-item .edit {
-    color : rgb(143, 233, 58);
+    color : #7bff00;
     margin-right: 10px;
     cursor:pointer;
     text-decoration: none;
     }
     .todo-list-item .remove {
-    color : rgb(243, 96, 96);
+    color : rgb(254, 0, 0);
     margin-right: 5px;
     cursor:pointer;
     text-decoration: none;
